@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelhaleemahmed - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Abdelhaleemahmed</h1>
+            <p class="header-subtitle">Developer & Problem Solver</p>
+            <p class="header-description">Building useful tools and utilities to make development easier</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="projects-section">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT CARD TEMPLATE - Copy this for each new project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-tools project-icon"></i>
+                            <h3 class="project-title">Tools & Utilities</h3>
+                        </div>
+                        <p class="project-description">
+                            A collection of useful development tools and utilities to streamline common tasks and boost productivity.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Automation Scripts</span>
+                            <span class="feature-tag">Code Generators</span>
+                            <span class="feature-tag">Development Utils</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bash</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdelhaleemahmed/tools-utilities" class="link-btn primary" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="link-btn secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END PROJECT CARD TEMPLATE -->
+
+                    <!-- Example of how to add another project - just copy the template above -->
+                    <div class="project-card coming-soon">
+                        <div class="project-header">
+                            <i class="fas fa-plus project-icon"></i>
+                            <h3 class="project-title">Next Project</h3>
+                        </div>
+                        <p class="project-description">
+                            More exciting projects coming soon! This is where your next repository showcase will appear.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Coming Soon</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="link-btn disabled">
+                                <i class="fas fa-clock"></i> In Development
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Abdelhaleemahmed. Built with GitHub Pages.</p>
+                <div class="social-links">
+                    <a href="https://github.com/abdelhaleemahmed" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <!-- Add more social links as needed -->
+                    <a href="mailto:your.email@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    card.classList.add('visible');
+                }
+            });
+        });
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
