@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelhaleemahmed - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-title-section">
+                    <h1 class="header-title">Ahmed Abdelhaleem Ahmed</h1>
+                    <p class="header-subtitle">Technology Evolution Authority & Multi-Domain Engineer</p>
+                    <p class="header-description">Electronic Engineer • Software Developer • Enterprise Systems Specialist • Professional Trainer</p>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left: Profile Avatar & Social Links -->
+                <div class="hero-content-left">
+                    <div class="profile-avatar-container">
+                        <div class="profile-avatar">
+                            <div class="avatar-initials">AA</div>
+                        </div>
+                        <div class="avatar-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verified Expert</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link github" title="GitHub" aria-label="Visit GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link linkedin" title="LinkedIn" aria-label="Visit LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" title="Twitter" aria-label="Visit Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link email" title="Email" aria-label="Send email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Hero Text & CTAs -->
+                <div class="hero-content-right">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge">
+                            <i class="fas fa-star"></i>
+                            Your Tech Mentor
+                        </span>
+                    </div>
+                    <h1 class="hero-title">Building Tomorrow's Technology Today</h1>
+                    <p class="hero-subtitle">20+ years of hands-on expertise bridging electronics, software, and enterprise systems</p>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>Electronics & Hardware</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Full-Stack Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud & Infrastructure</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chalkboard"></i>
+                            <span>Technical Training</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <button class="btn btn-primary" onclick="document.querySelector('[data-section=\"projects\"]').click()">
+                            <i class="fas fa-rocket"></i>
+                            View My Work
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.querySelector('[data-section=\"about\"]').click()">
+                            <i class="fas fa-user-circle"></i>
+                            Learn About Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Dashboard -->
+    <section class="statistics-section">
+        <div class="container">
+            <h2 class="stats-title">Impact & Expertise</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Code Examples</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Documentation Pages</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Students Trained</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showSection('projects')" data-section="projects">
+                    <i class="fas fa-code"></i> Projects
+                </button>
+                <button class="nav-tab" onclick="showSection('documentation')" data-section="documentation">
+                    <i class="fas fa-book"></i> Documentation
+                </button>
+                <button class="nav-tab" onclick="showSection('tutorials')" data-section="tutorials">
+                    <i class="fas fa-graduation-cap"></i> Tutorials
+                </button>
+                <button class="nav-tab" onclick="showSection('electronics')" data-section="electronics">
+                    <i class="fas fa-microchip"></i> Electronics
+                </button>
+                <button class="nav-tab" onclick="showSection('infrastructure')" data-section="infrastructure">
+                    <i class="fas fa-cloud"></i> Infrastructure
+                </button>
+                <button class="nav-tab" onclick="showSection('tools')" data-section="tools">
+                    <i class="fas fa-tools"></i> Tools & Utilities
+                </button>
+                <button class="nav-tab" onclick="showSection('about')" data-section="about">
+                    <i class="fas fa-user"></i> About
+                </button>
+                <button class="nav-tab" onclick="showSection('contact')" data-section="contact">
+                    <i class="fas fa-envelope"></i> Contact
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            
+            <!-- Projects Section -->
+            <section id="projects" class="content-section active">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    
+                    <!-- YAML Vim Tutorial -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fas fa-graduation-cap project-icon"></i>
+                            <h3 class="project-title">YAML Vim Mastery Tutorial</h3>
+                        </div>
+                        <p class="project-description">
+                            Interactive tutorial for mastering YAML editing in Vim. Complete guide with real-world examples, advanced techniques, and best practices for Kubernetes, Docker Compose, and CI/CD configurations.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Interactive Tutorial</span>
+                            <span class="feature-tag">Live Examples</span>
+                            <span class="feature-tag">Best Practices</span>
+                            <span class="feature-tag">Kubernetes Ready</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vim</span>
+                            <span class="tech-tag">YAML</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/tools-utilities/yaml-vim-tutorial.html" class="link-btn primary" target="_blank">
+                                <i class="fas fa-play"></i> Start Tutorial
+                            </a>
+                            <a href="https://github.com/abdelhaleemahmed/tools-utilities/tree/main/utilities/system-tools/vim/yaml-config" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Config
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- K&R C Programming Solutions -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fab fa-c project-icon"></i>
+                            <h3 class="project-title">K&R C Solutions Repository</h3>
+                        </div>
+                        <p class="project-description">
+                            Complete interactive documentation with 90+ solutions to classic C programming problems from "The C Programming Language" by Kernighan & Ritchie. Features collapsible chapters, debugging guides, compiler setup, and editor recommendations.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">90+ Solutions</span>
+                            <span class="feature-tag">Interactive Docs</span>
+                            <span class="feature-tag">Debugging Guides</span>
+                            <span class="feature-tag">Collapsible Chapters</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">GDB</span>
+                            <span class="tech-tag">LLDB</span>
+                            <span class="tech-tag">Valgrind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/documentation/programming/c-programming/k-and-r-solutions/documentation.html" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book-open"></i> View Documentation
+                            </a>
+                            <a href="https://github.com/abdelhaleemahmed/K-and-R-solutions" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Utilities Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-tools project-icon"></i>
+                            <h3 class="project-title">Tools & Utilities</h3>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive collection of development tools, system utilities, and configuration templates to streamline common tasks and boost productivity.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Vim Configurations</span>
+                            <span class="feature-tag">System Tools</span>
+                            <span class="feature-tag">RPM Packages</span>
+                            <span class="feature-tag">YAML Editing</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Vim Script</span>
+                            <span class="tech-tag">YAML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdelhaleemahmed/tools-utilities" class="link-btn primary" target="_blank">
+                                <i class="fab fa-github"></i> View Repository
+                            </a>
+                            <a href="https://abdelhaleemahmed.github.io/tools-utilities/" class="link-btn secondary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Documentation Hub -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-book-open project-icon"></i>
+                            <h3 class="project-title">Documentation Hub</h3>
+                        </div>
+                        <p class="project-description">
+                            Professional documentation built with Sphinx and Read the Docs theme. Comprehensive guides covering programming languages, operating systems, and development best practices.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Sphinx Powered</span>
+                            <span class="feature-tag">Multi-Language</span>
+                            <span class="feature-tag">Searchable</span>
+                            <span class="feature-tag">PDF Export</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Sphinx</span>
+                            <span class="tech-tag">reStructuredText</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ReadTheDocs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/documentation/" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Browse Docs
+                            </a>
+                            <a href="https://github.com/abdelhaleemahmed/documentation" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Project -->
+                    <div class="project-card coming-soon">
+                        <div class="project-header">
+                            <i class="fas fa-plus project-icon"></i>
+                            <h3 class="project-title">More Projects</h3>
+                        </div>
+                        <p class="project-description">
+                            Additional development projects and open-source contributions coming soon! This space will showcase more repositories and collaborative work.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Coming Soon</span>
+                            <span class="feature-tag">Open Source</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="link-btn disabled">
+                                <i class="fas fa-clock"></i> In Development
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Documentation Section -->
+            <section id="documentation" class="content-section">
+                <h2 class="section-title">Documentation Collections</h2>
+                <div class="doc-categories">
+                    
+                    <div class="category-section">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i> Programming Languages
+                        </h3>
+                        <div class="docs-grid">
+                            <div class="doc-card">
+                                <div class="doc-header">
+                                    <i class="fab fa-c"></i>
+                                    <h4>K&R C Programming Solutions</h4>
+                                </div>
+                                <p>90+ complete C programming solutions based on "The C Programming Language" by Kernighan & Ritchie with interactive documentation, compiler guides, and debugging techniques.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-file-alt"></i> 90+ Programs</span>
+                                    <span><i class="fas fa-code"></i> 8 Chapters</span>
+                                </div>
+                                <div class="doc-links">
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/programming/c-programming/k-and-r-solutions/documentation.html" class="doc-btn primary" target="_blank">
+                                        <i class="fas fa-book-open"></i> View Solutions
+                                    </a>
+                                    <a href="https://github.com/abdelhaleemahmed/K-and-R-solutions" class="doc-btn secondary" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub Repo
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-header">
+                                    <i class="fas fa-p"></i>
+                                    <h4>Pascal Programming</h4>
+                                </div>
+                                <p>Comprehensive Pascal tutorial covering structured programming, data types, procedures, and object-oriented programming concepts.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-file-alt"></i> 35+ Pages</span>
+                                    <span><i class="fas fa-code"></i> 75+ Examples</span>
+                                </div>
+                                <div class="doc-links">
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/pascal-programming/" class="doc-btn primary">
+                                        <i class="fas fa-book-open"></i> Read Docs
+                                    </a>
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/pascal-programming/pascal-programming.pdf" class="doc-btn secondary">
+                                        <i class="fas fa-download"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="doc-card coming-soon">
+                                <div class="doc-header">
+                                    <i class="fab fa-python"></i>
+                                    <h4>Python Advanced</h4>
+                                </div>
+                                <p>Advanced Python topics including decorators, metaclasses, async programming, and performance optimization.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-clock"></i> Coming Soon</span>
+                                </div>
+                                <div class="doc-links">
+                                    <span class="doc-btn disabled">
+                                        <i class="fas fa-hourglass-half"></i> In Progress
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-section">
+                        <h3 class="category-title">
+                            <i class="fas fa-desktop"></i> Operating Systems
+                        </h3>
+                        <div class="docs-grid">
+                            <div class="doc-card">
+                                <div class="doc-header">
+                                    <i class="fab fa-windows"></i>
+                                    <h4>Windows Administration</h4>
+                                </div>
+                                <p>Windows system administration guide covering PowerShell, Group Policy, networking, and security best practices.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-file-alt"></i> 60+ Pages</span>
+                                    <span><i class="fas fa-terminal"></i> PowerShell Scripts</span>
+                                </div>
+                                <div class="doc-links">
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/windows-admin/" class="doc-btn primary">
+                                        <i class="fas fa-book-open"></i> Read Docs
+                                    </a>
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/windows-admin/windows-admin.pdf" class="doc-btn secondary">
+                                        <i class="fas fa-download"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-header">
+                                    <i class="fab fa-linux"></i>
+                                    <h4>Linux Distributions</h4>
+                                </div>
+                                <p>Comprehensive guide covering multiple Linux distributions: Ubuntu, CentOS, Rocky Linux, Arch, and more.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-file-alt"></i> 80+ Pages</span>
+                                    <span><i class="fas fa-server"></i> 10+ Distros</span>
+                                </div>
+                                <div class="doc-links">
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/linux-distros/" class="doc-btn primary">
+                                        <i class="fas fa-book-open"></i> Read Docs
+                                    </a>
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/linux-distros/linux-distros.pdf" class="doc-btn secondary">
+                                        <i class="fas fa-download"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-header">
+                                    <i class="fas fa-server"></i>
+                                    <h4>Unix Systems</h4>
+                                </div>
+                                <p>Unix and Unix-like systems administration including FreeBSD, OpenBSD, Solaris, and AIX system management.</p>
+                                <div class="doc-stats">
+                                    <span><i class="fas fa-file-alt"></i> 45+ Pages</span>
+                                    <span><i class="fas fa-cogs"></i> Multiple Unix Flavors</span>
+                                </div>
+                                <div class="doc-links">
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/unix-systems/" class="doc-btn primary">
+                                        <i class="fas fa-book-open"></i> Read Docs
+                                    </a>
+                                    <a href="https://abdelhaleemahmed.github.io/documentation/unix-systems/unix-systems.pdf" class="doc-btn secondary">
+                                        <i class="fas fa-download"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tutorials Section -->
+            <section id="tutorials" class="content-section">
+                <h2 class="section-title">Interactive Tutorials</h2>
+                <div class="tutorials-grid">
+
+                    <div class="tutorial-card featured">
+                        <div class="tutorial-header">
+                            <i class="fas fa-graduation-cap project-icon"></i>
+                            <h3 class="tutorial-title">Tutorials Hub</h3>
+                            <span class="tutorial-level intermediate">All Tutorials</span>
+                        </div>
+                        <p class="tutorial-description">
+                            Complete collection of interactive tutorials covering Vim mastery, YAML configuration, Linux administration, and more.
+                        </p>
+                        <div class="tutorial-stats">
+                            <span><i class="fas fa-book-open"></i> Multiple Topics</span>
+                            <span><i class="fas fa-layer-group"></i> Organized by Subject</span>
+                            <span><i class="fas fa-check-circle"></i> Structured Learning</span>
+                        </div>
+                        <div class="tutorial-links">
+                            <a href="https://abdelhaleemahmed.github.io/interactive-tutorials/" class="tutorial-btn primary" target="_blank">
+                                <i class="fas fa-play"></i> Browse Tutorials
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-card featured">
+                        <div class="tutorial-header">
+                            <i class="fas fa-terminal project-icon"></i>
+                            <h3 class="tutorial-title">YAML Vim Mastery</h3>
+                            <span class="tutorial-level advanced">Advanced</span>
+                        </div>
+                        <p class="tutorial-description">
+                            Master YAML editing in Vim with interactive examples, real-world scenarios, and advanced techniques.
+                        </p>
+                        <div class="tutorial-stats">
+                            <span><i class="fas fa-clock"></i> ~45 min</span>
+                            <span><i class="fas fa-tasks"></i> 6 Sections</span>
+                            <span><i class="fas fa-code"></i> Interactive</span>
+                        </div>
+                        <div class="tutorial-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">Not Started</span>
+                        </div>
+                        <div class="tutorial-links">
+                            <a href="https://abdelhaleemahmed.github.io/tools-utilities/yaml-vim-tutorial.html" class="tutorial-btn primary">
+                                <i class="fas fa-play"></i> Start Tutorial
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-card featured">
+                        <div class="tutorial-header">
+                            <i class="fab fa-c project-icon"></i>
+                            <h3 class="tutorial-title">K&R C Programming</h3>
+                            <span class="tutorial-level beginner">Beginner to Advanced</span>
+                        </div>
+                        <p class="tutorial-description">
+                            Complete K&R C programming solutions with 90+ programs. Includes compiler guides, editor setup, and debugging techniques.
+                        </p>
+                        <div class="tutorial-stats">
+                            <span><i class="fas fa-code"></i> 90+ Programs</span>
+                            <span><i class="fas fa-tasks"></i> 8 Chapters</span>
+                            <span><i class="fas fa-check-circle"></i> Complete</span>
+                        </div>
+                        <div class="tutorial-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text">Complete</span>
+                        </div>
+                        <div class="tutorial-links">
+                            <a href="https://abdelhaleemahmed.github.io/documentation/programming/c-programming/k-and-r-solutions/documentation.html" class="tutorial-btn primary" target="_blank">
+                                <i class="fas fa-book-open"></i> View Tutorial
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-card featured">
+                        <div class="tutorial-header">
+                            <i class="fab fa-linux project-icon"></i>
+                            <h3 class="tutorial-title">Linux System Administration</h3>
+                            <span class="tutorial-level intermediate">Intermediate</span>
+                        </div>
+                        <p class="tutorial-description">
+                            Comprehensive Linux administration tutorial covering system management, networking, permissions, user accounts, and security best practices.
+                        </p>
+                        <div class="tutorial-stats">
+                            <span><i class="fas fa-graduation-cap"></i> Advanced Topics</span>
+                            <span><i class="fas fa-tasks"></i> 12+ Sections</span>
+                            <span><i class="fas fa-check-circle"></i> Complete</span>
+                        </div>
+                        <div class="tutorial-links">
+                            <a href="https://abdelhaleemahmed.github.io/interactive-tutorials/linux-admin-complete/tutorial.html" class="tutorial-btn primary" target="_blank">
+                                <i class="fas fa-book-open"></i> Start Tutorial
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Electronics Section -->
+            <section id="electronics" class="content-section">
+                <h2 class="section-title">Electronics & Hardware</h2>
+                <div class="projects-grid">
+
+                    <!-- Electronics Hub -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fas fa-microchip project-icon"></i>
+                            <h3 class="project-title">Electronics & Hardware Hub</h3>
+                        </div>
+                        <p class="project-description">
+                            Comprehensive guides on embedded systems, microcontrollers, and computer hardware. Master Raspberry Pi, Arduino, microcontrollers, CPU/GPU reviews, complete PC builds, and hardware selection.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Raspberry Pi</span>
+                            <span class="feature-tag">Arduino</span>
+                            <span class="feature-tag">Microcontrollers</span>
+                            <span class="feature-tag">Hardware Reviews</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Embedded Systems</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Hardware Design</span>
+                            <span class="tech-tag">Performance Tuning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/electronics-hardware/" class="link-btn primary" target="_blank">
+                                <i class="fas fa-rocket"></i> Visit Hub
+                            </a>
+                            <a href="https://github.com/abdelhaleemahmed/electronics-hardware" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Raspberry Pi Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-circle project-icon" style="color: #c51a4a;"></i>
+                            <h3 class="project-title">Raspberry Pi Platform</h3>
+                        </div>
+                        <p class="project-description">
+                            Complete guide to Raspberry Pi single-board computers. Getting started guides, project tutorials, hardware reviews, and troubleshooting for all Raspberry Pi models.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Getting Started</span>
+                            <span class="feature-tag">Projects</span>
+                            <span class="feature-tag">Reviews</span>
+                            <span class="feature-tag">IoT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/electronics-hardware/#embedded" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Arduino Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-code project-icon" style="color: #00979c;"></i>
+                            <h3 class="project-title">Arduino Development</h3>
+                        </div>
+                        <p class="project-description">
+                            Arduino microcontroller tutorials, sensor projects, robotics, and smart device development. Board comparisons and code libraries for IoT applications.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Board Tutorials</span>
+                            <span class="feature-tag">Sensor Projects</span>
+                            <span class="feature-tag">Robotics</span>
+                            <span class="feature-tag">Code Examples</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/electronics-hardware/#embedded" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Reviews Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-star project-icon" style="color: #ffd700;"></i>
+                            <h3 class="project-title">Hardware Reviews & Benchmarks</h3>
+                        </div>
+                        <p class="project-description">
+                            In-depth reviews and performance benchmarks of CPUs, GPUs, storage, and peripherals. Buying guides and recommendations for gaming, workstations, and servers.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">CPU Reviews</span>
+                            <span class="feature-tag">GPU Analysis</span>
+                            <span class="feature-tag">Benchmarks</span>
+                            <span class="feature-tag">Buying Guides</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/electronics-hardware/#hardware" class="link-btn primary" target="_blank">
+                                <i class="fas fa-chart-bar"></i> View Reviews
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PC Builds Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-desktop project-icon" style="color: #667eea;"></i>
+                            <h3 class="project-title">Complete PC Builds</h3>
+                        </div>
+                        <p class="project-description">
+                            Pre-designed computer builds for every use case. Gaming rigs, workstations, servers, and budget builds with component specifications and assembly guides.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Gaming Builds</span>
+                            <span class="feature-tag">Workstations</span>
+                            <span class="feature-tag">Budget Options</span>
+                            <span class="feature-tag">Assembly Guides</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/electronics-hardware/#builds" class="link-btn primary" target="_blank">
+                                <i class="fas fa-eye"></i> View Builds
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Infrastructure Section -->
+            <section id="infrastructure" class="content-section">
+                <h2 class="section-title">Infrastructure & Cloud</h2>
+                <div class="projects-grid">
+
+                    <!-- Infrastructure Hub -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <i class="fas fa-cloud project-icon"></i>
+                            <h3 class="project-title">Infrastructure & Cloud Hub</h3>
+                        </div>
+                        <p class="project-description">
+                            Master virtualization, containerization, cloud platforms, and DevOps. Comprehensive guides to VMware, Docker, Kubernetes, AWS, Azure, Terraform, and modern infrastructure practices.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Virtualization</span>
+                            <span class="feature-tag">Containers</span>
+                            <span class="feature-tag">Cloud Platforms</span>
+                            <span class="feature-tag">DevOps</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/" class="link-btn primary" target="_blank">
+                                <i class="fas fa-rocket"></i> Visit Hub
+                            </a>
+                            <a href="https://github.com/abdelhaleemahmed/infrastructure-cloud" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Virtualization Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-server project-icon" style="color: #667eea;"></i>
+                            <h3 class="project-title">Virtualization Platforms</h3>
+                        </div>
+                        <p class="project-description">
+                            Complete guides to VMware vSphere, VirtualBox, KVM/QEMU, and Hyper-V. Learn enterprise virtualization, home lab setup, and hypervisor comparisons.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">VMware</span>
+                            <span class="feature-tag">VirtualBox</span>
+                            <span class="feature-tag">KVM/QEMU</span>
+                            <span class="feature-tag">Home Lab</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/#virtualization" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Containerization Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fab fa-docker project-icon" style="color: #2496ed;"></i>
+                            <h3 class="project-title">Containers & Orchestration</h3>
+                        </div>
+                        <p class="project-description">
+                            Docker fundamentals, Kubernetes orchestration, and microservices architecture. Production deployments, best practices, and container security.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Docker</span>
+                            <span class="feature-tag">Kubernetes</span>
+                            <span class="feature-tag">Microservices</span>
+                            <span class="feature-tag">Orchestration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/#containers" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Platforms Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-cloud-upload-alt project-icon" style="color: #ff9900;"></i>
+                            <h3 class="project-title">Cloud Platforms</h3>
+                        </div>
+                        <p class="project-description">
+                            AWS, Azure, Google Cloud, DigitalOcean, and Linode. Architecture patterns, cost optimization, multi-cloud strategies, and cloud migration guides.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">AWS</span>
+                            <span class="feature-tag">Azure</span>
+                            <span class="feature-tag">GCP</span>
+                            <span class="feature-tag">Multi-Cloud</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/#cloud" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-tools project-icon" style="color: #ffa500;"></i>
+                            <h3 class="project-title">DevOps & Automation</h3>
+                        </div>
+                        <p class="project-description">
+                            CI/CD pipelines, infrastructure as code (Terraform, Ansible), monitoring, logging, and incident response. Modern DevOps practices and tools.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">CI/CD</span>
+                            <span class="feature-tag">Infrastructure as Code</span>
+                            <span class="feature-tag">Monitoring</span>
+                            <span class="feature-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/#devops" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Networking Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-network-wired project-icon" style="color: #00d4ff;"></i>
+                            <h3 class="project-title">Network Architecture</h3>
+                        </div>
+                        <p class="project-description">
+                            Cloud networking, security, monitoring, and troubleshooting. Enterprise network design, software-defined networking, and advanced networking patterns.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag">Network Design</span>
+                            <span class="feature-tag">Security</span>
+                            <span class="feature-tag">Cloud Networking</span>
+                            <span class="feature-tag">SDN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://abdelhaleemahmed.github.io/infrastructure-cloud/#devops" class="link-btn primary" target="_blank">
+                                <i class="fas fa-book"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tools Section -->
+            <section id="tools" class="content-section">
+                <h2 class="section-title">Tools & Utilities</h2>
+                <div class="tools-categories">
+                    
+                    <div class="category-section">
+                        <h3 class="category-title">
+                            <i class="fas fa-edit"></i> Editor Configurations
+                        </h3>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <i class="fas fa-vim"></i>
+                                    <h4>Vim 9 RPM Packages</h4>
+                                </div>
+                                <p>Custom-compiled Vim 9 for Rocky Linux 9 with enhanced features and modern plugin support.</p>
+                                <div class="tool-links">
+                                    <a href="https://github.com/abdelhaleemahmed/tools-utilities/tree/main/utilities/system-tools/vim/rpms" class="tool-btn primary">
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tool-card">
+                                <div class="tool-header">
+                                    <i class="fas fa-cog"></i>
+                                    <h4>YAML Vim Configuration</h4>
+                                </div>
+                                <p>Optimized Vim configuration specifically designed for YAML editing workflows.</p>
+                                <div class="tool-links">
+                                    <a href="https://github.com/abdelhaleemahmed/tools-utilities/tree/main/utilities/system-tools/vim/yaml-config" class="tool-btn primary">
+                                        <i class="fab fa-github"></i> View Config
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-section">
+                        <h3 class="category-title">
+                            <i class="fas fa-server"></i> System Tools
+                        </h3>
+                        <div class="tools-grid">
+                            <div class="tool-card coming-soon">
+                                <div class="tool-header">
+                                    <i class="fas fa-terminal"></i>
+                                    <h4>System Scripts</h4>
+                                </div>
+                                <p>Collection of useful system administration scripts for various Unix-like systems.</p>
+                                <div class="tool-links">
+                                    <span class="tool-btn disabled">
+                                        <i class="fas fa-clock"></i> Coming Soon
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="tool-card coming-soon">
+                                <div class="tool-header">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h4>Performance Monitoring</h4>
+                                </div>
+                                <p>Custom monitoring tools and dashboards for system performance analysis.</p>
+                                <div class="tool-links">
+                                    <span class="tool-btn disabled">
+                                        <i class="fas fa-clock"></i> Coming Soon
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-container">
+                    
+                    <div class="about-header">
+                        <h3 class="about-title">Technology Pioneer & Multi-Domain Engineer</h3>
+                        <p class="about-tagline">Bridging 20+ Years of Innovation: From Silicon to Cloud</p>
+                    </div>
+                    
+                    <div class="about-intro">
+                        <p>I'm a technology evolution authority who has witnessed, led, and shaped every major technology transition of the past two decades. From building Linux From Scratch in 2005 to implementing DevOps transformations in enterprise environments, I bring a unique perspective that spans hardware engineering, software development, enterprise systems, and emerging technologies.</p>
+                    </div>
+                    
+                    <div class="expertise-section">
+                        <h4 class="expertise-title">Core Expertise</h4>
+                        <div class="expertise-grid">
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-server"></i> Systems Engineering</h5>
+                                <p>LFS Linux (2005), Enterprise Linux Administration, Custom Distributions</p>
+                            </div>
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-cloud"></i> Virtualization Pioneer</h5>
+                                <p>ConnectX VM → VMware Server 1 → Modern Cloud Architecture</p>
+                            </div>
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-database"></i> Enterprise Integration</h5>
+                                <p>SAP, Oracle Database, Odoo ERP Implementation & Optimization</p>
+                            </div>
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-code"></i> Software Development</h5>
+                                <p>Professional C Programming, Python Development, System Tools Creation</p>
+                            </div>
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-network-wired"></i> Network Architecture</h5>
+                                <p>GNS3 Simulation (since 2008), Enterprise Network Design, SDN</p>
+                            </div>
+                            <div class="expertise-category">
+                                <h5><i class="fas fa-graduation-cap"></i> Professional Training</h5>
+                                <p>RHCE, MCSE, CCNA Certified Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="value-proposition">
+                            <h4>💎 Unique Value Proposition</h4>
+                            <p>As both an <strong>Electronic Engineer</strong> and <strong>Software Developer</strong>, I bridge the gap between hardware and software like few others can. My bilingual expertise (English/Arabic) allows me to serve both global and Middle Eastern markets with comprehensive technical education and consulting.</p>
+                        </div>
+                        
+                        <div class="mission-statement">
+                            <h4>🎯 Mission</h4>
+                            <p>Democratizing technical knowledge by creating tools, tutorials, and documentation that help developers and system administrators master complex technologies. Special focus on serving the Arabic-speaking developer community with high-quality technical content.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="technology-journey">
+                        <h4 class="journey-title">Technology Evolution Journey</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2005</div>
+                                <div class="timeline-content">
+                                    <h5>Linux From Scratch</h5>
+                                    <p>Built custom Linux distribution, demonstrating deep systems knowledge</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2008</div>
+                                <div class="timeline-content">
+                                    <h5>Network Simulation Pioneer</h5>
+                                    <p>Early adopter of GNS3 for advanced network modeling and training</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2010+</div>
+                                <div class="timeline-content">
+                                    <h5>Professional Training Authority</h5>
+                                    <p>RHCE, MCSE, CCNA certified instructor training IT professionals</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2015+</div>
+                                <div class="timeline-content">
+                                    <h5>DevOps Transformation Leader</h5>
+                                    <p>Led organizational DevOps implementations in multiple companies</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020+</div>
+                                <div class="timeline-content">
+                                    <h5>Arabic Tech Education Pioneer</h5>
+                                    <p>Creating comprehensive technical content for Arabic-speaking developers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact" class="content-section contact-section">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h2 class="contact-title">Get In Touch</h2>
+                        <p class="contact-description">Have a question or project in mind? I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+                    </div>
+
+                    <div class="contact-content">
+                        <!-- Contact Info Cards -->
+                        <div class="contact-info">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Location</h4>
+                                    <p>Open to remote opportunities worldwide</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-text">
+                                    <h4>Response Time</h4>
+                                    <p>Usually within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Your message here..." rows="6" required></textarea>
+                                <span class="error-message" id="messageError"></span>
+                                <span class="char-count"><span id="charCount">0</span>/1000</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                <button type="reset" class="btn btn-secondary">
+                                    <i class="fas fa-redo"></i>
+                                    Clear Form
+                                </button>
+                            </div>
+
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Abdelhaleemahmed. Comprehensive development resources and documentation.</p>
+                <div class="social-links">
+                    <a href="https://github.com/abdelhaleemahmed" target="_blank" class="social-link" title="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-link" title="Email Contact">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://abdelhaleemahmed.github.io/documentation/" class="social-link" title="Documentation Hub">
+                        <i class="fas fa-book"></i>
+                    </a>
+                    <a href="https://abdelhaleemahmed.github.io/tools-utilities/" class="social-link" title="Tools Repository">
+                        <i class="fas fa-tools"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Section switching functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Activate clicked tab
+            const activeTab = document.querySelector(`[data-section="${sectionId}"]`);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+
+            // Trigger animations for newly shown section
+            const newSection = document.getElementById(sectionId);
+            const cards = newSection.querySelectorAll('.project-card, .doc-card, .tutorial-card, .tool-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Scroll to navigation area (not to top)
+            const navigation = document.querySelector('.main-navigation');
+            if (navigation) {
+                navigation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Enhanced animation on scroll with intersection observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const allCards = document.querySelectorAll('.project-card, .doc-card, .tutorial-card, .tool-card');
+            
+            // Observe all cards for scroll animations
+            allCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Initial animation for visible section
+            const activeSection = document.querySelector('.content-section.active');
+            const initialCards = activeSection.querySelectorAll('.project-card, .doc-card, .tutorial-card, .tool-card');
+            initialCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 150);
+            });
+
+            // Tutorial progress simulation (for demo)
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const randomProgress = Math.floor(Math.random() * 100);
+                setTimeout(() => {
+                    bar.style.width = randomProgress + '%';
+                    const progressText = bar.parentElement.nextElementSibling;
+                    if (progressText) {
+                        if (randomProgress === 0) {
+                            progressText.textContent = 'Not Started';
+                        } else if (randomProgress < 100) {
+                            progressText.textContent = `${randomProgress}% Complete`;
+                        } else {
+                            progressText.textContent = 'Completed';
+                        }
+                    }
+                }, 1000);
+            });
+        });
+
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+            
+            // Navigate sections with arrow keys when focused on tabs
+            if (e.target.classList.contains('nav-tab')) {
+                const tabs = Array.from(document.querySelectorAll('.nav-tab'));
+                const currentIndex = tabs.indexOf(e.target);
+                
+                if (e.key === 'ArrowRight' && currentIndex < tabs.length - 1) {
+                    e.preventDefault();
+                    tabs[currentIndex + 1].click();
+                    tabs[currentIndex + 1].focus();
+                } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    e.preventDefault();
+                    tabs[currentIndex - 1].click();
+                    tabs[currentIndex - 1].focus();
+                }
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Enhanced hover effects
+        const enhanceHoverEffects = () => {
+            const allCards = document.querySelectorAll('.project-card:not(.coming-soon), .doc-card:not(.coming-soon), .tutorial-card:not(.coming-soon), .tool-card:not(.coming-soon)');
+            allCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        };
+
+        // Initialize hover effects
+        enhanceHoverEffects();
+
+        // URL hash navigation
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showSection(hash);
+            }
+        });
+
+        // Check for initial hash
+        if (window.location.hash) {
+            const initialSection = window.location.hash.substring(1);
+            if (document.getElementById(initialSection)) {
+                showSection(initialSection);
+            }
+        }
+
+        // Dark Mode Implementation
+        class ThemeManager {
+            constructor() {
+                this.themeToggle = document.getElementById('themeToggle');
+                this.htmlElement = document.documentElement;
+                this.storageKey = 'theme-preference';
+                this.init();
+            }
+
+            init() {
+                // Load saved preference or use system preference
+                const savedTheme = localStorage.getItem(this.storageKey);
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const prefersDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+
+                if (prefersDark) {
+                    this.setDarkMode(true);
+                }
+
+                // Add event listener for theme toggle
+                if (this.themeToggle) {
+                    this.themeToggle.addEventListener('click', () => this.toggleTheme());
+                }
+
+                // Listen for system theme changes
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem(this.storageKey)) {
+                        this.setDarkMode(e.matches);
+                    }
+                });
+            }
+
+            toggleTheme() {
+                const isDarkMode = this.htmlElement.getAttribute('data-theme') === 'dark';
+                this.setDarkMode(!isDarkMode);
+                localStorage.setItem(this.storageKey, isDarkMode ? 'light' : 'dark');
+            }
+
+            setDarkMode(isDark) {
+                if (isDark) {
+                    this.htmlElement.setAttribute('data-theme', 'dark');
+                    if (this.themeToggle) {
+                        this.themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                        this.themeToggle.title = 'Switch to light mode';
+                    }
+                } else {
+                    this.htmlElement.removeAttribute('data-theme');
+                    if (this.themeToggle) {
+                        this.themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                        this.themeToggle.title = 'Switch to dark mode';
+                    }
+                }
+            }
+        }
+
+        // Initialize theme manager on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            new ThemeManager();
+        });
+
+        // Initialize if already loaded
+        if (document.readyState !== 'loading') {
+            new ThemeManager();
+        }
+
+        // Animated Counter for Statistics
+        class StatisticsCounter {
+            constructor() {
+                this.counters = document.querySelectorAll('.stat-number[data-target]');
+                this.isInitialized = false;
+                this.init();
+            }
+
+            init() {
+                // Use Intersection Observer to trigger animation when stats are in view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.isInitialized) {
+                            this.isInitialized = true;
+                            this.startCounters();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.3
+                });
+
+                // Observe the statistics section
+                const statsSection = document.querySelector('.statistics-section');
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
+            }
+
+            startCounters() {
+                this.counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    this.animateCounter(counter, target);
+                });
+            }
+
+            animateCounter(element, target) {
+                const duration = 2000; // 2 seconds
+                const start = 0;
+                const startTime = performance.now();
+
+                const animate = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Easing function for smooth animation
+                    const easeOutQuad = progress => 1 - (1 - progress) * (1 - progress);
+                    const eased = easeOutQuad(progress);
+
+                    const current = Math.floor(start + (target - start) * eased);
+                    element.textContent = current.toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        element.textContent = target.toLocaleString();
+                    }
+                };
+
+                requestAnimationFrame(animate);
+            }
+        }
+
+        // Initialize statistics counter
+        document.addEventListener('DOMContentLoaded', () => {
+            new StatisticsCounter();
+        });
+
+        // Initialize if already loaded
+        if (document.readyState !== 'loading') {
+            new StatisticsCounter();
+        }
+
+        // Contact Form Validation
+        class ContactFormHandler {
+            constructor() {
+                this.form = document.getElementById('contactForm');
+                this.messageField = document.getElementById('message');
+                this.charCount = document.getElementById('charCount');
+                this.formStatus = document.getElementById('formStatus');
+                this.fields = ['name', 'email', 'subject', 'message'];
+                this.maxChars = 1000;
+                this.init();
+            }
+
+            init() {
+                if (!this.form) return;
+
+                // Character counter
+                if (this.messageField) {
+                    this.messageField.addEventListener('input', (e) => this.updateCharCount(e));
+                }
+
+                // Form submission
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+                // Real-time validation on blur
+                this.fields.forEach(fieldName => {
+                    const field = document.getElementById(fieldName);
+                    if (field) {
+                        field.addEventListener('blur', () => this.validateField(fieldName));
+                        field.addEventListener('input', () => this.clearError(fieldName));
+                    }
+                });
+            }
+
+            updateCharCount(e) {
+                const count = e.target.value.length;
+                if (count > this.maxChars) {
+                    e.target.value = e.target.value.substring(0, this.maxChars);
+                    return;
+                }
+                if (this.charCount) {
+                    this.charCount.textContent = count;
+                }
+            }
+
+            validateField(fieldName) {
+                const field = document.getElementById(fieldName);
+                const errorElement = document.getElementById(fieldName + 'Error');
+                let isValid = true;
+                let errorMessage = '';
+
+                if (!field.value.trim()) {
+                    isValid = false;
+                    errorMessage = 'This field is required';
+                } else if (fieldName === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid email address';
+                    }
+                } else if (fieldName === 'name') {
+                    if (field.value.trim().length < 2) {
+                        isValid = false;
+                        errorMessage = 'Name must be at least 2 characters';
+                    }
+                } else if (fieldName === 'message') {
+                    if (field.value.trim().length < 10) {
+                        isValid = false;
+                        errorMessage = 'Message must be at least 10 characters';
+                    }
+                }
+
+                if (errorElement) {
+                    if (!isValid) {
+                        errorElement.textContent = errorMessage;
+                        errorElement.classList.add('show');
+                        field.style.borderColor = '#e74c3c';
+                    } else {
+                        errorElement.classList.remove('show');
+                        field.style.borderColor = '';
+                    }
+                }
+
+                return isValid;
+            }
+
+            clearError(fieldName) {
+                const errorElement = document.getElementById(fieldName + 'Error');
+                if (errorElement && errorElement.classList.contains('show')) {
+                    const field = document.getElementById(fieldName);
+                    if (field.value.trim()) {
+                        errorElement.classList.remove('show');
+                        field.style.borderColor = '';
+                    }
+                }
+            }
+
+            validateAll() {
+                let isValid = true;
+                this.fields.forEach(fieldName => {
+                    if (!this.validateField(fieldName)) {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            handleSubmit(e) {
+                e.preventDefault();
+
+                if (!this.validateAll()) {
+                    this.showStatus('Please fix the errors above', 'error');
+                    return;
+                }
+
+                // Simulate form submission
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Show processing state
+                this.showStatus('Sending your message...', 'processing');
+                const submitBtn = this.form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                // Simulate network request
+                setTimeout(() => {
+                    // Success response
+                    this.showStatus('Thank you! Your message has been sent successfully. I\'ll get back to you soon.', 'success');
+                    this.form.reset();
+                    if (this.charCount) {
+                        this.charCount.textContent = '0';
+                    }
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+
+                    // Clear success message after 5 seconds
+                    setTimeout(() => {
+                        this.formStatus.classList.remove('success');
+                        this.formStatus.textContent = '';
+                    }, 5000);
+                }, 1500);
+            }
+
+            showStatus(message, type) {
+                if (!this.formStatus) return;
+                this.formStatus.textContent = message;
+                this.formStatus.className = 'form-status ' + type;
+            }
+        }
+
+        // Initialize contact form
+        document.addEventListener('DOMContentLoaded', () => {
+            new ContactFormHandler();
+        });
+
+        // Initialize if already loaded
+        if (document.readyState !== 'loading') {
+            new ContactFormHandler();
+        }
+    </script>
+</body>
+</html>
