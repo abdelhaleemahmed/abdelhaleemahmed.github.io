@@ -1089,7 +1089,7 @@ body {
 
 .tutorial-card.featured {
     border: 2px solid #667eea;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    background: white;
 }
 
 .tutorial-card.coming-soon {
