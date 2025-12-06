@@ -742,13 +742,13 @@ body {
 .project-card.featured::after {
     content: '⭐ Featured';
     position: absolute;
-    top: -12px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
     z-index: 1;
@@ -782,6 +782,10 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.project-card.featured .project-header {
+    padding-right: 100px;
 }
 
 .project-icon {
